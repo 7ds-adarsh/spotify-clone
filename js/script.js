@@ -20,7 +20,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`../${folder}/`)
+    let a = await fetch(`/${folder}/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -109,7 +109,7 @@ async function displayAlbums() {
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
             console.log("Fetching Songs")
-            songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)
+            songs = await getSongs(`../songs/${item.currentTarget.dataset.folder}`)
             playMusic(songs[0])
 
         })
