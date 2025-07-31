@@ -1,0 +1,52 @@
+[debug] [2025-07-05T14:12:26.406Z] ----------------------------------------------------------------------
+[debug] [2025-07-05T14:12:26.412Z] Command:       C:\Program Files\nodejs\node.exe C:\ProgProjects\web designs\spotify clone\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-07-05T14:12:26.413Z] CLI Version:   14.9.0
+[debug] [2025-07-05T14:12:26.414Z] Platform:      win32
+[debug] [2025-07-05T14:12:26.414Z] Node Version:  v22.15.0
+[debug] [2025-07-05T14:12:26.415Z] Time:          Sat Jul 05 2025 19:42:26 GMT+0530 (India Standard Time)
+[debug] [2025-07-05T14:12:26.415Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-05T14:12:26.428Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-05T14:12:26.428Z] > authorizing via signed-in user (adarshpawaiya345@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\ProgProjects\web designs\spotify clone
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-07-05T14:13:48.989Z] Checked if tokens are valid: true, expires at: 1751728131269
+[debug] [2025-07-05T14:13:48.990Z] Checked if tokens are valid: true, expires at: 1751728131269
+[debug] [2025-07-05T14:13:48.993Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-07-05T14:13:48.993Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"firebase projects:create"}
+[debug] [2025-07-05T14:13:49.754Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 400
+[debug] [2025-07-05T14:13:49.754Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT"}}
+[debug] [2025-07-05T14:13:49.755Z] Couldn't check if project ID firebase projects:create is available. Original error: FirebaseError: Failed to check if project ID is available. See firebase-debug.log for more info.
+[debug] [2025-07-05T14:14:14.357Z] Checked if tokens are valid: true, expires at: 1751728131269
+[debug] [2025-07-05T14:14:14.357Z] Checked if tokens are valid: true, expires at: 1751728131269
+[debug] [2025-07-05T14:14:14.357Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-07-05T14:14:14.358Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"firebase projects:create","name":"spotifyclone"}
+[debug] [2025-07-05T14:14:15.959Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2025-07-05T14:14:15.959Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [Cannot create domain prefixed projects]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"Cannot create domain prefixed projects"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2025-07-05T14:14:16.172Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 400, field [project_id] has issue [Cannot create domain prefixed projects]
+    at responseToError (C:\ProgProjects\web designs\spotify clone\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\ProgProjects\web designs\spotify clone\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
